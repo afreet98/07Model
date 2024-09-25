@@ -2,7 +2,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<c:set var="type" value="User" scope="session"/>
 
 <html>
 <head>
@@ -10,6 +9,7 @@
 
 <link rel="stylesheet" href="/css/admin.css" type="text/css">
 
+<c:set var="type" value="User" scope="session"/>
 
 <script type="text/javascript">
 
@@ -58,7 +58,7 @@
 				<option value="1"  ${ ! empty search.searchCondition && search.searchCondition==1 ? "selected" : "" }>È¸¿ø¸í</option>
 			</select>
 			<input type="text" name="searchKeyword" 
-						value="${! empty search.searchKeyword ? search.searchKeyword : ""}"  
+						value="${! empty search.searchKeyword ? search.searchKeyword : ''}"  
 						class="ct_input_g" style="width:200px; height:20px" > 
 		</td>
 		<td align="right" width="70">
